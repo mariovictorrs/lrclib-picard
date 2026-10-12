@@ -1,0 +1,34 @@
+uuid = "3faac5f3-d661-4622-95bf-ad31d372f5f3"
+name = "LRCLIB Lyrics"
+description = "Automatically download lyrics from LRCLIB for loaded tracks."
+long_description = """
+Downloads lyrics from LRCLIB automatically when Picard loads a track.
+
+The plugin uses the track title, artist, album, and duration to find a match.
+It prefers synchronized lyrics when available and otherwise stores plain
+lyrics in the `lyrics` tag. Existing lyrics are never replaced.
+
+Right-click a track to retry a missing-lyrics lookup or search and choose a
+specific LRCLIB result manually. A manually selected result replaces existing
+lyrics deliberately.
+
+Optionally, save lyrics as a UTF-8 `.lrc` sidecar file when Picard saves audio
+files. Existing sidecar files are preserved by default and can be configured
+to be overwritten.
+
+Choose whether audio tags prefer synchronized lyrics (falling back to
+unsynchronized lyrics), use unsynchronized lyrics only, or receive no lyrics.
+Sidecar `.lrc` files always use synchronized lyrics.
+
+No account, API key, or additional Python dependency is required.
+"""
+api = ["3.0"]
+authors = ["Mário Victor Ribeiro Silva"]
+maintainers = ["Mário Victor Ribeiro Silva"]
+license = "MIT"
+license_url = "https://opensource.org/license/mit"
+homepage = "https://github.com/mariovictorrs/lrclib-picard"
+report_bugs_to = "https://github.com/mariovictorrs/lrclib-picard/issues"
+categories = ["metadata"]
+min_python_version = "3.9"
+source_locale = "en"
